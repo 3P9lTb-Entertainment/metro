@@ -1,0 +1,10 @@
+.page__wrapper {
+    display: flex;
+    height: 100%;
+}
+
+.menu__wrapper {
+    width: 310px;
+    padding: 10px;
+}
+

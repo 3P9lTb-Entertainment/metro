@@ -1,0 +1,11 @@
+.user__wrapper {
+}
+
+.rank__info {
+    color: var(--color-accent-main);
+}
+
+.top__info__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
