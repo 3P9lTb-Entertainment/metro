@@ -4,6 +4,7 @@
 }
 
 .menu__wrapper {
+    box-sizing: border-box;
     width: 310px;
     padding: 10px;
 }

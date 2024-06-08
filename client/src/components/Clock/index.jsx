@@ -1,10 +1,12 @@
-import {useEffect, useState} from "react";
+import React, { useState, useEffect } from 'react';
 
-function Time() {
+function Clock() {
     const [currentTime, setCurrentTime] = useState('');
 
     useEffect(() => {
-        const intervalId = setInterval(() => {
+        let frameId;
+
+        const updateTime = () => {
             const now = new Date();
             const timeString = now.toLocaleTimeString('ru-RU', {
                 hour: '2-digit',
@@ -17,9 +19,11 @@ function Time() {
                 month: 'long'
             });
             setCurrentTime(`${timeString} ${dateString}`);
-        }, 1000);
+            frameId = requestAnimationFrame(updateTime);
+        };
 
-        return () => clearInterval(intervalId);
+        frameId = requestAnimationFrame(updateTime);
+        return () => cancelAnimationFrame(frameId);
     }, []);
 
     return (
@@ -27,4 +31,4 @@ function Time() {
     );
 }
 
-export default Time;
+export default Clock;

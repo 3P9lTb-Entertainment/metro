@@ -1,13 +1,15 @@
 import classes from './styles.module.css'
 import UserBlock from "../../components/UserBlock";
-import Time from "../../components/Time";
+import Clock from "../../components/Clock";
+import Button from "../../components/Button";
 
 function MainPage() {
     return (
         <div className={classes.page__wrapper}>
             <div className={classes.menu__wrapper}>
                 <UserBlock/>
-                <Time/>
+                <Clock/>
+                <Button>Адаптивное распределение</Button>
             </div>
         </div>
     );
