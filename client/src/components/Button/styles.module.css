@@ -1,0 +1,16 @@
+.button__wrapper {
+    border: 0;
+    background-color: var(--color-accent-main);
+    width: 100%;
+    height: min-content;
+    cursor: pointer;
+}
+
+.button__wrapper:active {
+    background-color: var(--color-hover-main);
+}
+
+.button__text {
+    color: white;
+    padding: 4px;
+}

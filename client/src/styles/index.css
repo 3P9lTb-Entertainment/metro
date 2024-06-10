@@ -28,4 +28,17 @@ main {
 
 p {
   color: var(--font-main-color);
+  font-size: var(--font-main-size);
+}
+
+input {
+  font-size: var(--font-main-size);
+}
+
+.bold__text {
+  font-weight: var(--font-accent-weight);
+}
+
+.margin__top {
+  margin-top: var(--standart-margin-top);
 }

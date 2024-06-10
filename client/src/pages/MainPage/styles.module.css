@@ -9,3 +9,46 @@
     padding: 10px;
 }
 
+.clock__wrapper {
+    margin-top: 10px;
+}
+
+.buttons__wrapper {
+    margin-top: 10px;
+    display: grid;
+    gap: 4px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "adap adap"
+    "dist conf";
+}
+
+.button__adaptive {
+    grid-area: adap;
+}
+
+.button__distribution {
+    grid-area: dist;
+}
+
+.button__confirm {
+    grid-area: conf;
+}
+
+.filters__wrapper {
+    margin-top: 10px;
+}
+
+.searchbar__wrapper {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 4px;
+    align-items: end;
+}
+
+.filters__wrapper {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

@@ -2,4 +2,6 @@
     --font-main-color: rgb(34, 42, 53);
     --font-placeholder-color: rgb(180, 180, 180);
     --color-accent-main: rgb(85, 212, 237);
+    --color-hover-main: rgb(153, 229, 245);
+    --color-input-background: rgba(85, 212, 237, 0.12);
 }

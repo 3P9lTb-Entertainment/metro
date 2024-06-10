@@ -1,5 +1,4 @@
 .button__text {
-    font-size: var(--font-main-size);
     color: var(--color-accent-main);
     cursor: pointer;
 }

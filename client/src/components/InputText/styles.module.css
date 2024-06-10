@@ -1,0 +1,19 @@
+.input__element {
+    border: 0;
+    border-bottom: 2px var(--color-accent-main) solid;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--color-input-background);
+}
+
+.input__element:focus {
+    outline: 0;
+}
+
+.label__element {
+    display: block;
+}
+
+.input__wrapper {
+    width: 100%;
+}
