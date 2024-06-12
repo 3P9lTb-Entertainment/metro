@@ -1,0 +1,33 @@
+.page__wrapper {
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.base__info__wrapper {
+    column-gap: 4px;
+    display: grid;
+    grid-template-columns: max-content auto;
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.user__wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.page__label {
+    text-align: center;
+    font-weight: var(--font-accent-weight);
+}
+
+.list__wrapper {
+    height: 100%;
+
+}

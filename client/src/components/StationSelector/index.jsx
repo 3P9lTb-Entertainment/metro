@@ -42,6 +42,7 @@ function StationSelector({value, onChange, name, label, placeholder}) {
         setSearch('')
         onChange({ currentTarget: { name: name, value: defaultStation }});
         setFilteredStations(stationsNames)
+        setOnFocus(false)
     }
 
     return (

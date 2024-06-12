@@ -8,4 +8,5 @@
 .top__info__wrapper {
     display: flex;
     justify-content: space-between;
+    gap: 4px;
 }

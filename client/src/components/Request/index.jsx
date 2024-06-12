@@ -77,7 +77,9 @@ function Request({request}) {
                         </div>
                     </div>
 
+
                     <div className={classes.request__info__wrapper}>
+                        {/* Маршрут */}
                         <div>
                             <label className={'bold__text'}>Маршрут</label>
                             <p>маршрут маршрут маршрут маршрут маршрут маршрут маршрут маршрут маршрут маршрут</p>
@@ -87,7 +89,6 @@ function Request({request}) {
                 </div>
             }
         </div>
-
     );
 }
 

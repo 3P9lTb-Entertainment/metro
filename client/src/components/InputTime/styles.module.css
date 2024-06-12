@@ -1,0 +1,27 @@
+.input__element {
+    border: 1px solid transparent;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--color-input-background);
+    padding: 10px;
+    font-size: var(--font-input-size);
+}
+
+.input__element:hover {
+    border-color: var(--color-input-border);
+}
+
+.input__element:focus {
+    outline: 0;
+}
+
+.label__element {
+    display: block;
+}
+
+.input__wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}

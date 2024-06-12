@@ -30,13 +30,8 @@
 
 .block__info__wrapper {
     display: flex;
-    gap: 4px;
+    column-gap: 4px;
 }
-
-/*.block__info {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*}*/
 
 .staff__list {
     padding-left: 14px;
@@ -44,5 +39,5 @@
 
 .block__info__wrapper {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: max-content auto;
 }

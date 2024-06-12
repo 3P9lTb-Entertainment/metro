@@ -1,7 +1,3 @@
-.requests__headers p {
-    font-weight: var(--font-accent-weight);
-}
-
 .requests__headers {
     box-sizing: border-box;
     width: 100%;
@@ -14,6 +10,6 @@
 }
 
 .list__wrapper {
-    max-height: calc(100vh - 79px);
-    overflow-y: scroll;
+    height: calc(100% - 37px);
+    overflow-y: auto;
 }

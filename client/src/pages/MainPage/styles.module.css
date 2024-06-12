@@ -70,10 +70,12 @@
 }
 
 .requests__wrapper {
-    padding: 10px;
-    box-sizing: border-box;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;/* Для того чтобы родительский контейнер мог заполнять высоту экрана, если это необходимо */
+
 }
+
 
 .select__element {
     border: 1px solid transparent;
@@ -100,3 +102,6 @@
     flex-shrink: 0;
 }
 
+.list__wrapper {
+    height: calc(100% - 16px);
+}

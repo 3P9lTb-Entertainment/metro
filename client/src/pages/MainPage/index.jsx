@@ -12,6 +12,7 @@ import {requests} from "../../datasets/requests";
 import {requestStatus} from "../../config";
 import {passengerTypes} from "../../config";
 import RequestsList from "../../components/RequestsList";
+import InputTime from "../../components/InputTime";
 
 function MainPage() {
 
@@ -143,24 +144,19 @@ function MainPage() {
                     {/* Выбор времени */}
                     <div className={classes.time__wrapper}>
                         <div>
-                            <label htmlFor={'startTime'}>От</label>
-                            <input
-                                id={'startTime'}
-                                type={"time"}
+                            <InputTime
+                                label={'От'}
                                 name={'startTime'}
                                 onChange={handleFiltersChange}
                                 value={filters.startTime}
-                                className={classes.input__time}
                             />
                         </div>
                         <div>
-                            <label>До</label>
-                            <input
-                                type={"time"}
+                            <InputTime
+                                label={'До'}
                                 name={'endTime'}
                                 onChange={handleFiltersChange}
                                 value={filters.endTime}
-                                className={classes.input__time}
                             />
                         </div>
                     </div>
@@ -168,7 +164,9 @@ function MainPage() {
             </div>
             <div className={classes.requests__wrapper}>
                 <p className={'bold__text'}>Найдена 21 заявка</p>
-                <RequestsList requests={requests}/>
+                <div className={classes.list__wrapper}>
+                    <RequestsList requests={requests} />
+                </div>
             </div>
         </div>
     );
