@@ -25,6 +25,7 @@
     box-sizing: border-box;
     grid-column: 1 / -1;
     display: flex;
+    justify-content: space-between;
 }
 
 .block__info__wrapper {
@@ -32,12 +33,16 @@
     gap: 4px;
 }
 
-.block__info {
-    display: flex;
-    flex-direction: column;
-}
+/*.block__info {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*}*/
 
 .staff__list {
-    padding: 0;
-    list-style-type: none;
+    padding-left: 14px;
+}
+
+.block__info__wrapper {
+    display: grid;
+    grid-template-columns: auto auto;
 }

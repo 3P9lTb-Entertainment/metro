@@ -1,6 +1,7 @@
 import classes from './styles.module.css'
 import {useState} from "react";
 import {Link} from "react-router-dom";
+import Button from "../Button";
 
 function Request({request}) {
     const [isOpen, setIsOpen] = useState(false)
@@ -24,66 +25,64 @@ function Request({request}) {
                 <p>{request.tpz}</p>
             </div>
             {isOpen &&
-                <div className={classes.request__info__wrapper}>
-                    {/* Общая информация */}
-                    <div>
-                        <label className={'bold__text'}>Общее</label>
-                        <div className={classes.block__info__wrapper}>
-                            <div className={classes.block__info}>
+                <div>
+                    <div className={classes.request__info__wrapper}>
+                        {/* Общая информация */}
+                        <div>
+                            <label className={'bold__text'}>Общее</label>
+                            <div className={classes.block__info__wrapper}>
                                 <p>Номер заявки:</p>
-                                <p>Статус заявки:</p>
-                            </div>
-                            <div className={classes.block__info}>
                                 <p>{request.id}</p>
+                                <p>Статус заявки:</p>
                                 <p>{request.status}</p>
                             </div>
                         </div>
-                    </div>
 
-                    {/* Информация о пассажире */}
-                    <div>
-                        <label className={'bold__text'}>Пассажир</label>
-                        <div className={classes.block__info__wrapper}>
-                            <div className={classes.block__info}>
+                        {/* Информация о пассажире */}
+                        <div>
+                            <label className={'bold__text'}>Пассажир</label>
+                            <div className={classes.block__info__wrapper}>
                                 <p>Имя:</p>
+                                <Link to={`/passenger/${request.id_pas}`}>Стрижевский Филипп Александрович</Link>
                                 <p>Телефон:</p>
-                                <p>Категория:</p>
-                            </div>
-                            <div className={classes.block__info}>
-                                <Link to={`/passenger/${request.id_pas}`}><p>Стрижевский Филипп Александрович</p></Link>
                                 <p>+7(915)-494-38-23</p>
+                                <p>Категория:</p>
                                 <p>{request.cat_pas}</p>
                             </div>
                         </div>
-                    </div>
 
-                    {/* Дата и время */}
-                    <div>
-                        <label className={'bold__text'}>Дата и время</label>
-                        <div className={classes.block__info__wrapper}>
-                            <div className={classes.block__info}>
+                        {/* Дата и время */}
+                        <div>
+                            <label className={'bold__text'}>Дата и время</label>
+                            <div className={classes.block__info__wrapper}>
                                 <p>Регистрация:</p>
-                                <p>Запланированное начало: </p>
-                                <p>Начало сопровождения:</p>
-                                <p>Завершение сопровождения:</p>
-                            </div>
-                            <div className={classes.block__info}>
                                 <p>{request.tpz}</p>
+                                <p>Запланированное начало: </p>
                                 <p>{request.datetime}</p>
+                                <p>Начало сопровождения:</p>
                                 <p>{request.time3}</p>
+                                <p>Завершение сопровождения:</p>
                                 <p>{request.time4}</p>
                             </div>
                         </div>
+
+                        {/* Сотрудники */}
+                        <div>
+                            <label className={'bold__text'}>Сотрудникик</label>
+                            <ol className={classes.staff__list}>
+                                <li><Link to={`/staff/123`}>Стрижевский Филипп Александрович</Link></li>
+                                <li><Link to={`/staff/123`}>Стрижевский Филипп Александрович</Link></li>
+                                <li><Link to={`/staff/123`}>Стрижевский Филипп Александрович</Link></li>
+                            </ol>
+                        </div>
                     </div>
 
-                    {/* Сотрудники */}
-                    <div>
-                        <label className={'bold__text'}>Сотрудникик</label>
-                        <ul className={classes.staff__list}>
-                            <li><Link to={`/staff/123`}>Стрижевский Филипп Александрович</Link></li>
-                            <li><Link to={`/staff/123`}>Стрижевский Филипп Александрович</Link></li>
-                            <li><Link to={`/staff/123`}>Стрижевский Филипп Александрович</Link></li>
-                        </ul>
+                    <div className={classes.request__info__wrapper}>
+                        <div>
+                            <label className={'bold__text'}>Маршрут</label>
+                            <p>маршрут маршрут маршрут маршрут маршрут маршрут маршрут маршрут маршрут маршрут</p>
+                        </div>
+                        <div><Button>Изменить</Button></div>
                     </div>
                 </div>
             }

@@ -35,6 +35,15 @@ input {
   font-size: var(--font-main-size);
 }
 
+a {
+  text-decoration: none;
+  color: var(--color-accent-main);
+}
+
+a:visited {
+  color: var(--color-accent-main);
+}
+
 .bold__text {
   font-weight: var(--font-accent-weight);
 }
