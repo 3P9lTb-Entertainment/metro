@@ -7,23 +7,14 @@ import {useEffect, useState} from "react";
 import Calendar from "react-calendar";
 import 'react-calendar/dist/Calendar.css';
 import StationSelector from "../../components/StationSelector";
+import {defaultStation} from "../../config";
 
 function MainPage() {
 
     const [filters, setFilters] = useState({
         searchBar: '',
-        startStation: {
-            name_station: '',
-            name_line: '0',
-            id: 0,
-            id_line: 0
-        },
-        endStation: {
-            name_station: '',
-            name_line: '0',
-            id: 0,
-            id_line: 0
-        },
+        startStation: defaultStation,
+        endStation: defaultStation,
         date: [new Date(), new Date()],
         startTime: '00:00',
         endTime: '00:00'
