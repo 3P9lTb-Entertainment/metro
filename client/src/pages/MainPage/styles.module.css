@@ -68,3 +68,35 @@
     display: flex;
     justify-content: space-between;
 }
+
+.requests__wrapper {
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.select__element {
+    border: 1px solid transparent;
+    background-color: var(--color-input-background);
+    padding: 10px;
+    width: 180px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.select__element:focus {
+    outline: none;
+}
+
+.select__element:hover {
+    border-color: var(--color-input-border);
+}
+
+.select__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+}
+

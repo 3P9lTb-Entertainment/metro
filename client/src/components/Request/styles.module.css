@@ -1,0 +1,43 @@
+.request__wrapper {
+    box-sizing: border-box;
+    border: 1px solid var(--color-input-border);
+    border-radius: 8px;
+}
+
+.request {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 7% 14% 14% 7% 7% 14% 23% 14%;
+    align-items: center;
+    text-align: center;
+    padding: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+    user-select: none;
+}
+
+.request:hover {
+    background-color: var(--color-input-background);
+}
+
+.request__info__wrapper {
+    padding: 10px;
+    box-sizing: border-box;
+    grid-column: 1 / -1;
+    display: flex;
+}
+
+.block__info__wrapper {
+    display: flex;
+    gap: 4px;
+}
+
+.block__info {
+    display: flex;
+    flex-direction: column;
+}
+
+.staff__list {
+    padding: 0;
+    list-style-type: none;
+}

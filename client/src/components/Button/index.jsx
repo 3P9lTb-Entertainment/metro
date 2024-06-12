@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import classes from './styles.module.css'
 
 function Button({children, onClick}) {

@@ -1,8 +1,7 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import classes from './styles.module.css'
 import {stationsNames} from "../../datasets/stations_names";
 import Station from "../Station";
-import InputText from "../InputText";
 import {defaultStation} from "../../config";
 
 function StationSelector({value, onChange, name, label, placeholder}) {

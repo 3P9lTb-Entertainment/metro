@@ -1,0 +1,19 @@
+.requests__headers p {
+    font-weight: var(--font-accent-weight);
+}
+
+.requests__headers {
+    box-sizing: border-box;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 7% 14% 14% 7% 7% 14% 23% 14%;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid var(--color-input-border);
+}
+
+.list__wrapper {
+    max-height: calc(100vh - 79px);
+    overflow-y: scroll;
+}

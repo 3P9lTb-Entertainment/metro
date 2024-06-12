@@ -8,6 +8,10 @@ import Calendar from "react-calendar";
 import 'react-calendar/dist/Calendar.css';
 import StationSelector from "../../components/StationSelector";
 import {defaultStation} from "../../config";
+import {requests} from "../../datasets/requests";
+import {requestStatus} from "../../config";
+import {passengerTypes} from "../../config";
+import RequestsList from "../../components/RequestsList";
 
 function MainPage() {
 
@@ -17,7 +21,9 @@ function MainPage() {
         endStation: defaultStation,
         date: [new Date(), new Date()],
         startTime: '00:00',
-        endTime: '00:00'
+        endTime: '00:00',
+        requestStatus: 'Все',
+        passengerType: 'Все'
     })
 
     const [date, setDate] = useState([new Date(), new Date()]);
@@ -77,6 +83,37 @@ function MainPage() {
                         />
                         <Button onClick={handeSearchButton}>Найти</Button>
                     </div>
+
+                    {/* Статус заявки */}
+                    <div className={classes.select__wrapper}>
+                        <label>Статус заявки</label>
+                        <select className={classes.select__element}
+                                value={filters.requestStatus}
+                                name={'requestStatus'}
+                                onChange={handleFiltersChange}
+                        >
+                            <option>Все</option>
+                            {requestStatus.map(status => (
+                                <option key={`requestStatus${status}`}>{status}</option>
+                            ))}
+                        </select>
+                    </div>
+
+                    {/* Категория пассажира */}
+                    <div className={classes.select__wrapper}>
+                        <label>Категория</label>
+                        <select className={classes.select__element}
+                                value={filters.passengerType}
+                                name={'passengerType'}
+                                onChange={handleFiltersChange}
+                        >
+                            <option>Все</option>
+                            {passengerTypes.map(status => (
+                                <option key={`passengerTypes${status}`}>{status}</option>
+                            ))}
+                        </select>
+                    </div>
+
                     {/* Станция отправления */}
                     <StationSelector
                         label={'Станция отправления '}
@@ -128,6 +165,10 @@ function MainPage() {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className={classes.requests__wrapper}>
+                <p className={'bold__text'}>Найдена 21 заявка</p>
+                <RequestsList requests={requests}/>
             </div>
         </div>
     );
