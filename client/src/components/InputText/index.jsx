@@ -6,6 +6,7 @@ function InputText({value, onChange, name, label, placeholder}) {
         <div className={classes.input__wrapper}>
             {label !== undefined && <label className={classes.label__element} htmlFor={name}>{label}</label>}
             <input
+                autoComplete={'off'}
                 className={classes.input__element}
                 id={name}
                 type={"text"}

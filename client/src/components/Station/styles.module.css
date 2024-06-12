@@ -1,0 +1,16 @@
+.station__wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    text-align: left;
+}
+
+.label__wrapper {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

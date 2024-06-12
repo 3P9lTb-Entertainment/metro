@@ -3,5 +3,29 @@
     --font-placeholder-color: rgb(180, 180, 180);
     --color-accent-main: rgb(85, 212, 237);
     --color-hover-main: rgb(153, 229, 245);
-    --color-input-background: rgba(85, 212, 237, 0.12);
+    --color-input-background: rgb(246, 246, 246);
+    --color-input-border: rgb(220, 220, 220);
+
+    --color-line-0: #CCCCCC;
+    --color-line-1: #EF161E;
+    --color-line-2: #2DBE2C;
+    --color-line-3: #0078BE;
+    --color-line-4: #00BFFF;
+    --color-line-4: #00BFFF;
+    --color-line-5: #8D5B2D;
+    --color-line-6: #ED9121;
+    --color-line-7: #800080;
+    --color-line-8: #FFD702;
+    --color-line-8A: #FFD702;
+    --color-line-9: #999999 ;
+    --color-line-10: #99CC00;
+    --color-line-11: #82C0C0;
+    --color-line-11: #231F20 ;
+    --color-line-12: #A1B3D4;
+    --color-line-13: #B9C8E7;
+    --color-line-14: #FFFFFF;
+    --color-line-15: #DE64A1 ;
+    --color-line-16: #03795F  ;
+    --color-line-17: #27303F   ;
+    --color-line-18: #AC1753   ;
 }

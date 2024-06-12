@@ -52,3 +52,19 @@
     flex-direction: column;
     gap: 10px;
 }
+
+.input__time {
+    border: 0;
+    border-bottom: var(--color-accent-main) 2px solid;
+    margin-left: var(--standart-margin-top);
+    cursor: pointer;
+}
+
+.input__time:focus {
+    outline: none;
+}
+
+.time__wrapper {
+    display: flex;
+    justify-content: space-between;
+}

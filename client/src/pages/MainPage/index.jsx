@@ -6,14 +6,27 @@ import InputText from "../../components/InputText";
 import {useEffect, useState} from "react";
 import Calendar from "react-calendar";
 import 'react-calendar/dist/Calendar.css';
+import StationSelector from "../../components/StationSelector";
 
 function MainPage() {
 
     const [filters, setFilters] = useState({
         searchBar: '',
-        startStation: '',
-        endStation: '',
-        date: [new Date(), new Date()]
+        startStation: {
+            name_station: '',
+            name_line: '0',
+            id: 0,
+            id_line: 0
+        },
+        endStation: {
+            name_station: '',
+            name_line: '0',
+            id: 0,
+            id_line: 0
+        },
+        date: [new Date(), new Date()],
+        startTime: '00:00',
+        endTime: '00:00'
     })
 
     const [date, setDate] = useState([new Date(), new Date()]);
@@ -74,7 +87,7 @@ function MainPage() {
                         <Button onClick={handeSearchButton}>Найти</Button>
                     </div>
                     {/* Станция отправления */}
-                    <InputText
+                    <StationSelector
                         label={'Станция отправления '}
                         name='startStation'
                         value={filters.startStation}
@@ -82,14 +95,14 @@ function MainPage() {
                         onChange={handleFiltersChange}
                     />
                     {/* Станция назначения */}
-                    <InputText
+                    <StationSelector
                         label={'Станция назначения '}
                         name='endStation'
                         value={filters.endStation}
                         placeholder={'Любая'}
                         onChange={handleFiltersChange}
                     />
-                    {/* Выбор даты заявки */}
+                    {/* Выбор дат заявки */}
                     <div>
                         <p>Выбор даты</p>
                         <Calendar
@@ -99,9 +112,31 @@ function MainPage() {
                             onChange={setDate}
                         />
                     </div>
+                    {/* Выбор времени */}
+                    <div className={classes.time__wrapper}>
+                        <div>
+                            <label htmlFor={'startTime'}>От</label>
+                            <input
+                                id={'startTime'}
+                                type={"time"}
+                                name={'startTime'}
+                                onChange={handleFiltersChange}
+                                value={filters.startTime}
+                                className={classes.input__time}
+                            />
+                        </div>
+                        <div>
+                            <label>До</label>
+                            <input
+                                type={"time"}
+                                name={'endTime'}
+                                onChange={handleFiltersChange}
+                                value={filters.endTime}
+                                className={classes.input__time}
+                            />
+                        </div>
+                    </div>
                 </div>
-
-
             </div>
         </div>
     );
